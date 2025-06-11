@@ -1,0 +1,151 @@
+/* App.css */
+
+/* 1) Global pastel background + floral overlay */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: 
+    /* floral overlay (semi-transparent) */
+    linear-gradient(
+      rgba(255,255,255,0.8),
+      rgba(255,255,255,0.8)
+    ),
+    url('https://img.freepik.com/premium-vector/vector-watercolor-seamless-floral-pattern-illustration-horizontally-vertically-repeatable_8130-2882.jpg?semt=ais_hybrid&w=740') center/cover no-repeat,
+    #ffeef8; /* fallback soft pink */
+}
+
+/* 2) Container card */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+/* 3) Heading */
+h2 {
+  text-align: center;
+  color: #d657a0;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 4) Table restyle into “cards” */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.75rem;
+}
+
+.table thead th {
+  color: #a33a73;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: none;
+}
+
+.table tbody tr {
+  background: #fff0f6;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.table td, .table th {
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+  border: none;
+}
+
+/* action buttons */
+.btn {
+  border-radius: 12px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background: #d657a0;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #c04187;
+}
+
+.btn-danger {
+  background: #ff6b81;
+  border: none;
+}
+
+.btn-danger:hover {
+  background: #e55060;
+}
+
+/* 5) Form card */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card h5 {
+  color: #a33a73;
+  margin-bottom: 1rem;
+}
+
+/* form controls */
+.form-control, .form-select {
+  border-radius: 8px;
+  border: 1px solid #e3a5c2;
+  padding: 0.6rem;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #d657a0;
+  box-shadow: 0 0 0 0.2rem rgba(214, 87, 160, 0.25);
+}
+
+/* 6) Add flair */
+input::placeholder, select {
+  color: #a33a73;
+}
+
+button.btn-success {
+  background: #a8e6cf;
+  color: #275038;
+}
+
+/* 7) Form-group wrappers for better spacing */
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;            /* space below each row */
+}
+
+.form-group label {
+  min-width: 5rem;                /* reserve a bit of label width */
+  margin-right: 0.75rem;          /* gap between label and control */
+  color: #a33a73;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group .react-datepicker-wrapper {
+  flex: 1;                        /* let the control fill remaining space */
+}
+
+/* Group for the buttons row */
+.form-group.buttons {
+  margin-top: 1.5rem;
+  justify-content: flex-start;
+}
+
+.form-group.buttons button {
+  margin-right: 0.75rem;          /* space between buttons */
+}

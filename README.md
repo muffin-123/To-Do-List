@@ -4,11 +4,6 @@ A full-stack **MERN** (MongoDB, Express, React, Node.js) Todo List application w
 
 ---
 
-## 🚀 Live Demo
-
-> *(Add your deployed URL here once you’ve published to Vercel/Heroku/etc.)*
-
----
 
 ## 🔍 Features
 
@@ -50,11 +45,40 @@ A full-stack **MERN** (MongoDB, Express, React, Node.js) Todo List application w
 PORT=5000
 
 
-### Installation
+## 💻 Getting Started
 
-1. **Clone the repo**  
- ```bash
- git clone https://github.com/<your-username>/To-Do-List.git
- cd To-Do-List
+### Installation & Local Setup
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/<your-username>/To-Do-List.git
+cd To-Do-List
+
+# 2. Back End Setup
+cd server
+npm install
+# Create server/.env with:
+# MONGO_URI=your-atlas-uri-here
+# PORT=5000
+
+# 3. Front End Setup
+cd ../client
+npm install
+# (Optional) add to client/package.json:
+# "proxy": "http://localhost:5000"
+
+## ▶️ Running the App Locally
+# In Terminal 1 (Back End)
+cd server
+npm run dev
+# → http://localhost:5000
+
+# In Terminal 2 (Front End)
+cd client
+npm start
+# → http://localhost:3000
+
+
+
 
 
